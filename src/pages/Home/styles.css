@@ -1,0 +1,115 @@
+
+
+.container{
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+.content {
+    overflow-x: none;
+    width: 700px;
+    height: auto;
+    overflow-y: hidden;
+    gap: 30px;
+    margin: 20px 0 20px 0;
+    
+}
+
+
+p {
+    line-height: 4rem;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.titleData {
+    background-color: #FFFF00;
+    padding: 20px; 
+}
+
+.titleCheck {
+
+    background-color: #C4E0B2;
+    padding: 20px; 
+
+}
+
+.titleBoletim {
+
+    background-color: #9FE0F4;
+    padding: 20px;
+
+}
+
+.titleInicioObra {
+    background-color: #5B9BD5;
+    padding: 20px; 
+}
+.titleEntregaObra {
+
+    background-color: #C55A11;
+    padding: 20px; 
+
+}
+.titleAtestadoCapacidadeTecnica {
+    background-color: #a5a5a5;
+    padding: 20px; 
+}
+
+.titlePesquisaSatisfacao{
+    background-color: #7F6000;
+    padding: 20px;
+}
+
+
+.titleFomularioVisitaTecnica{
+    background-color: red;
+    padding: 20px;
+}
+
+
+.subTitle {
+    color: #1b1b1b;
+    background-color: #ececec;
+    padding: 20px;
+}
+.topics {
+    font-size: 20px;
+}
+
+.containerPdf {
+    
+    margin-top: 5%;
+    width: 300px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.pdfImg {
+
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    
+}
+
+.buttonPdf {
+width: 150px;
+padding: 2px;
+color: white;
+font-size: 18px;
+font-weight: bold;
+background-color: black;
+border: none;
+border-radius: 15px;
+}
