@@ -12,18 +12,15 @@ import RegisterUser from '../pages/RegisterUser';
 const RoutesApp = () => {
 
     const Private = ({Item}) => {
-        const {signed} = useAuth();
-        return signed > 0 ? <Item /> : <Login />
+      const token = localStorage.getItem('ns_token')
+        return !token ? <Login /> : <Home />
     }
-
-   
-
     return (
 
     <HashRouter>
     <Routes>
-        <Route exact path='/home' element={<Private Item={Login} />}/>
-        <Route path="/" element={<Home /> } />
+        <Route exact path='/home' element={<Private Item={Home} />}/>
+        <Route path="/" element={<Login /> } />
         <Route exact path="/signup" element={<RegisterUser /> }/>
         <Route path="*" element={<Login />}/>
     </Routes>
