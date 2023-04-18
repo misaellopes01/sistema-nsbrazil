@@ -15,26 +15,19 @@ function Login(){
     const [senha, setSenha] = useState();
     const [error, setError] = useState();
 
-    const handleStart = () => {
-
+    const handleStart = async () => {
         if(!email | !senha) {
-
             setError("Preencha todos os campos.");
-
             return;
         }
-        const res = signin(email, senha);
-
-       if(res){
-
-         setError(res);
-
-           return;
-
+        const res = await signin(email, senha);
+       
+        if(res !== "Success"){
+            setError(res);
+            return;
         }
-
+        
         navigate("/home");
-
     }
 
 
@@ -56,6 +49,7 @@ function Login(){
                 />
                 <Button Text="Acessar" onClick={handleStart}/>
                 <C.LabelError>{error}</C.LabelError>
+               
                 
 
             </C.Content>
