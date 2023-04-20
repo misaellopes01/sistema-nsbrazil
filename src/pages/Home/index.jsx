@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import * as C from "./style";
 import Sidebar from '../../components/Sidebar';
 import User from '../../assets/conecte-se.png';
@@ -13,6 +13,7 @@ import logons from './nsbrazil.png';
 import pdf from './img-pdf.png';
 import "./styles.css";
 import ReactToPrint from 'react-to-print';
+import { api } from '../../lib/api';
 
 
 
@@ -85,8 +86,17 @@ let RegisterUser = () => {
 
   
  let Report = () => {
+  const [report, setReport] = useState()
 
-
+  useEffect(() => {
+    async function getReports() {
+      const token = localStorage.getItem('ns_token')
+      api.defaults.headers.common.authorization = `Bearer ${token}`
+      const response = await api.get('/forms')
+      setReport(response.data)
+    }
+    getReports()
+  }, [])
  /**Criando um array para listar o pdf */
 
  const Pdf = [
